@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f6f2ea" />
+    <title>Shelf It - Your physical media, remembered</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar">
+        <a class="brand" href="#top" aria-label="Shelf It home"><span class="brand-mark">S</span><span>Shelf It</span></a>
+        <div class="sidebar-label">Your library</div>
+        <nav class="main-nav" aria-label="Main navigation">
+          <button class="nav-item active" data-view="all"><span class="nav-icon">[]</span>All media <span class="nav-count" id="allCount">0</span></button>
+          <button class="nav-item" data-view="book"><span class="nav-icon">B</span>Books <span class="nav-count" id="bookCount">0</span></button>
+          <button class="nav-item" data-view="movie"><span class="nav-icon">M</span>Movies <span class="nav-count" id="movieCount">0</span></button>
+          <button class="nav-item" data-view="music"><span class="nav-icon">V</span>Music <span class="nav-count" id="musicCount">0</span></button>
+          <button class="nav-item" data-view="profile"><span class="nav-icon">@</span>Profile</button>
+        </nav>
+        <div class="sidebar-label collections-label">Collections</div>
+        <div class="collection-list"><button class="collection-item"><span class="dot coral"></span>Want to find</button><button class="collection-item"><span class="dot teal"></span>To revisit</button><button class="collection-item"><span class="dot yellow"></span>Favorites</button></div>
+        <div class="sidebar-footer"><div class="profile"><div class="avatar">NC</div><div><strong>Nick's shelf</strong><small>Personal library</small></div><span class="more">...</span></div></div>
+      </aside>
+
+      <main class="main-content" id="top">
+        <header class="topbar"><button class="mobile-menu" aria-label="Open menu">=</button><div class="breadcrumb">My shelf <span>/</span> <strong id="breadcrumbView">All media</strong></div><div class="top-actions"><button class="icon-button" aria-label="Notifications">o</button><button class="avatar small" data-view="profile">NC</button></div></header>
+        <section class="intro"><div><p class="eyebrow">YOUR PERSONAL ARCHIVE</p><h1>A shelf for the<br /><em>things you keep.</em></h1><p class="intro-copy">A home for the books, records, films, and objects<br class="desktop-only" /> that make your world feel like yours.</p></div><button class="add-button" id="openModal"><span>+</span> Add to shelf</button></section>
+
+        <section class="stats" aria-label="Library stats"><div class="stat"><span class="stat-value" id="totalStat">0</span><span class="stat-label">items on shelf</span></div><div class="stat"><span class="stat-value" id="favoriteStat">0</span><span class="stat-label">favorites</span></div><div class="stat"><span class="stat-value" id="recentStat">0</span><span class="stat-label">added this month</span></div><div class="shelf-progress"><div class="progress-heading"><span>Keep collecting</span><strong><span id="progressNumber">0</span> / 24</strong></div><div class="progress-track"><span id="progressBar"></span></div></div></section>
+
+        <section class="library-section"><div class="section-heading"><div><h2 id="sectionTitle">Everything on your shelf</h2><p id="sectionSubtitle">The full collection, in one place.</p></div><div class="view-tools"><label class="search"><span>/</span><input id="searchInput" type="search" placeholder="Search your shelf" /></label><button class="view-toggle active" aria-label="Grid view">::</button><button class="view-toggle" aria-label="List view">=</button></div></div><div class="filter-row" id="filterRow"><button class="filter-chip active" data-filter="all">All</button><button class="filter-chip" data-filter="book">Books</button><button class="filter-chip" data-filter="movie">Movies</button><button class="filter-chip" data-filter="music">Music</button></div><div class="shelf-grid" id="shelfGrid"></div></section>
+        <section class="profile-view" id="profileView" hidden></section>
+      </main>
+    </div>
+
+    <div class="modal-backdrop" id="modalBackdrop" hidden><section class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle"><button class="modal-close" id="closeModal" aria-label="Close">x</button><p class="eyebrow">NEW ACQUISITION</p><h2 id="modalTitle">Add something to your shelf</h2><form id="mediaForm"><label>Title<input name="title" required placeholder="e.g. The Dispossessed" /></label><label>Creator / artist<input name="creator" required placeholder="e.g. Ursula K. Le Guin" /></label><div class="form-row"><label>Type<select name="type"><option value="book">Book</option><option value="movie">Movie</option><option value="music">Music</option></select></label><label>Year<input name="year" type="number" min="1800" max="2100" placeholder="2024" /></label></div><label>Cover color<select name="color"><option value="plum">Plum</option><option value="orange">Orange</option><option value="teal">Teal</option><option value="navy">Navy</option><option value="mustard">Mustard</option></select></label><button class="submit-button" type="submit">Place on shelf <span>-></span></button></form></section></div>
+    <div class="toast" id="toast" role="status"></div>
+    <script src="app.js"></script>
+  </body>
+</html>
