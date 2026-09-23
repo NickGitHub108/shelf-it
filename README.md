@@ -19,3 +19,14 @@ TV Shelf
 Music Shelf
 [ - ]
 
+## Catalog APIs
+
+The navbar catalog search uses external APIs instead of seeded media:
+
+- Books: Google Books when available, with Open Library as a fallback
+- TV shows: TVmaze
+- Music: iTunes Search
+- Movies: TMDB when `TMDB_API_KEY` is configured, with iTunes and Wikimedia fallbacks
+
+Set `TMDB_API_KEY` in the server environment for richer movie metadata. The key is read only on the server and is never sent to the browser.
+
