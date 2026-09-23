@@ -1,0 +1,14 @@
+{
+  "name": "shelf-it",
+  "version": "1.0.0",
+  "description": "A personal media shelf backed by a database",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "sqlite3": "^5.1.7"
+  }
+}

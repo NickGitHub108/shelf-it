@@ -21,11 +21,11 @@
         </nav>
         <div class="sidebar-label collections-label">Collections</div>
         <div class="collection-list"><button class="collection-item"><span class="dot coral"></span>Want to find</button><button class="collection-item"><span class="dot teal"></span>To revisit</button><button class="collection-item"><span class="dot yellow"></span>Favorites</button></div>
-        <div class="sidebar-footer"><div class="profile"><div class="avatar">NC</div><div><strong>Nick's shelf</strong><small>Personal library</small></div><span class="more">...</span></div></div>
+        <div class="sidebar-footer"><div class="profile"><div class="avatar" id="sidebarAvatar">NC</div><div><strong id="sidebarUserName">Nick's shelf</strong><small>Personal library</small></div><button class="more" id="logoutButton" aria-label="Log out">...</button></div></div>
       </aside>
 
       <main class="main-content" id="top">
-        <header class="topbar"><button class="mobile-menu" aria-label="Open menu">=</button><div class="breadcrumb">My shelf <span>/</span> <strong id="breadcrumbView">All media</strong></div><div class="top-actions"><button class="icon-button" aria-label="Notifications">o</button><button class="avatar small" data-view="profile">NC</button></div></header>
+        <header class="topbar"><button class="mobile-menu" aria-label="Open menu">=</button><div class="breadcrumb">My shelf <span>/</span> <strong id="breadcrumbView">All media</strong></div><div class="top-actions"><button class="icon-button" aria-label="Notifications">o</button><button class="avatar small" id="profileButton" data-view="profile">NC</button></div></header>
         <section class="intro"><div><p class="eyebrow">YOUR PERSONAL ARCHIVE</p><h1>A shelf for the<br /><em>things you keep.</em></h1><p class="intro-copy">A home for the books, records, films, and objects<br class="desktop-only" /> that make your world feel like yours.</p></div><button class="add-button" id="openModal"><span>+</span> Add to shelf</button></section>
 
         <section class="stats" aria-label="Library stats"><div class="stat"><span class="stat-value" id="totalStat">0</span><span class="stat-label">items on shelf</span></div><div class="stat"><span class="stat-value" id="favoriteStat">0</span><span class="stat-label">favorites</span></div><div class="stat"><span class="stat-value" id="recentStat">0</span><span class="stat-label">added this month</span></div><div class="shelf-progress"><div class="progress-heading"><span>Keep collecting</span><strong><span id="progressNumber">0</span> / 24</strong></div><div class="progress-track"><span id="progressBar"></span></div></div></section>

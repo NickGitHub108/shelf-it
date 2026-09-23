@@ -1,0 +1,20 @@
+# dependencies
+node_modules/
+
+# local database/runtime data
+shelf.db
+.env
+.env.*
+*.log
+
+# build and generated files
+/dist/
+/.cache/
+
+# editor/system files
+.DS_Store
+Thumbs.db
+.vscode/
+
+# random files
+HOW_IT_WORKS.md
